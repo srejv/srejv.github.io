@@ -94,10 +94,67 @@
 
 <h1 id="code">Code</h1>
 
-<p>What is the same as MyPong? MainContentComponent
-Okay so what are the differences? Well the DataModel is different.</p>
+<p>The code is <a href="https://github.com/srejv/SampleDragger">available on github</a>. What is the same as MyPong?
+MainContentComponent is the same. It just holds the Game and GameUI objects.
+Game updates the GameState, GameUI paints the GameState to the windows. Simple.</p>
+
+<h2 id="data-model">Data Model</h2>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="n">Mole</span> <span class="p">{</span>
+  <span class="c1">// Internal Type
+</span>  <span class="k">enum</span> <span class="k">class</span> <span class="nc">State</span> <span class="o">:</span> <span class="kt">int</span> <span class="p">{</span> <span class="n">Hidden</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Showing</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Animating</span> <span class="o">=</span> <span class="mi">2</span><span class="p">};</span>
+
+  <span class="c1">// Data
+</span>  <span class="n">Rectangle</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">body</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+  <span class="n">KeyPress</span> <span class="n">keyHit</span><span class="p">{</span><span class="sc">'q'</span><span class="p">};</span>
+  <span class="n">State</span> <span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="o">::</span><span class="n">Hidden</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">isUp</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">};</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="n">GameState</span> <span class="p">{</span>
+  <span class="c1">// Game Objects
+</span>  <span class="n">vector</span><span class="o">&lt;</span><span class="n">Mole</span><span class="o">&gt;</span> <span class="n">moles</span><span class="p">;</span>
+
+  <span class="c1">// Data
+</span>  <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">combo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">timeSpent</span> <span class="o">=</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">;</span>
+
+  <span class="n">KeyPress</span> <span class="n">restartGame</span><span class="p">{</span><span class="n">KeyPress</span><span class="o">::</span><span class="n">F5Key</span><span class="p">};</span>
+<span class="p">};</span></code></pre></figure>
+
+<h2 id="reset-game">Reset Game</h2>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">resetGameState</span><span class="p">(</span><span class="n">GameState</span><span class="o">&amp;</span> <span class="n">state</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Reload the moles
+</span>  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+  <span class="c1">// Here the moles keypresses are set.
+</span>  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'q'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">72</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'w'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">144</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'e'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">216</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'r'</span><span class="p">)</span> <span class="p">});</span>
+
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">72</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'a'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">72</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'s'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">144</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'d'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">216</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'f'</span><span class="p">)</span> <span class="p">});</span>
+
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">144</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'z'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">72</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'x'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">144</span><span class="p">,</span><span class="mi">144</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'c'</span><span class="p">)</span> <span class="p">});</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">moles</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span> <span class="p">{</span><span class="mi">216</span><span class="p">,</span><span class="mi">144</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">},</span> <span class="n">KeyPress</span><span class="p">(</span><span class="sc">'v'</span><span class="p">)</span> <span class="p">});</span>
+
+  <span class="c1">// Reset game data
+</span>  <span class="n">state</span><span class="p">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">combo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">state</span><span class="p">.</span><span class="n">timeSpent</span> <span class="o">=</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <h1 id="some-thoughts">Some thoughts</h1>
+
+<p>Would be nice with the rest of the stuff. Like game over screen, intro screen
+animations, sound etc.</p>
 
 <h1 id="downloads">Downloads</h1>
 
@@ -108,6 +165,7 @@ Okay so what are the differences? Well the DataModel is different.</p>
   <li><a href="/assets/MyMole-mac.zip">Mac build</a> directly.</li>
   <li><a href="/assets/MyMole-linux.zip">Linux build</a> directly.</li>
 </ul>
+
 
   </div>
 
