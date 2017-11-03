@@ -1,5 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-11-03T17:22:14+01:00</updated><id>/</id><title type="html">Kewk</title><subtitle>Things. Things.. I was just thinking of making some games and posting stuff here for myself. Not really cool stuff.</subtitle><entry><title type="html">MyPong</title><link href="/mypong/c++/code/programming/games/2017/11/02/mypong.html" rel="alternate" type="text/html" title="MyPong" /><published>2017-11-02T00:19:21+01:00</published><updated>2017-11-02T00:19:21+01:00</updated><id>/mypong/c++/code/programming/games/2017/11/02/mypong</id><content type="html" xml:base="/mypong/c++/code/programming/games/2017/11/02/mypong.html">&lt;p&gt;Good day internet friends. I’m writing a post about my pong game. Wont finish today though. I hope to write one about each game that I am making as documentation practise.
-I am using the  &lt;a href=&quot;&quot;&gt;JUCE&lt;/a&gt; framework for this. An “Animated Application” project. I assume you’re intelligent enough to find out how to compile and start using JUCE by yourself. You can still read along, it shouldn’t really matter, only if you want to try it out yourself. I’ve used the JUCE live engine thing for this so..&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-11-03T18:10:41+01:00</updated><id>/</id><title type="html">Kewk</title><subtitle>Things. Things.. I was just thinking of making some games and posting stuff here for myself. Not really cool stuff.</subtitle><entry><title type="html">Sample Dragger</title><link href="/mymole/c++/code/programming/games/2017/11/03/sample-dragger.html" rel="alternate" type="text/html" title="Sample Dragger" /><published>2017-11-03T00:19:21+01:00</published><updated>2017-11-03T00:19:21+01:00</updated><id>/mymole/c++/code/programming/games/2017/11/03/sample-dragger</id><content type="html" xml:base="/mymole/c++/code/programming/games/2017/11/03/sample-dragger.html">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+
+&lt;p&gt;Hello internet friends. I made a small app. You drag around samples and generate
+a new sample depending on the the x position of the sample component. It uses &lt;a href=&quot;https://www.juce.com/&quot;&gt;JUCE 5&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
+
+&lt;p&gt;Check out the code on &lt;a href=&quot;https://github.com/srejv/SampleDragger&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;some-thoughts&quot;&gt;Some thoughts&lt;/h1&gt;
+
+&lt;p&gt;Well you can’t really scroll, fade, set volume or preview.&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-requests&quot;&gt;Feature requests:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Viewport to move around with&lt;/li&gt;
+  &lt;li&gt;Multiple sample components per audio buffer&lt;/li&gt;
+  &lt;li&gt;VST plugin?&lt;/li&gt;
+  &lt;li&gt;Play on midiNoteOn, vel &amp;gt; 0&lt;/li&gt;
+  &lt;li&gt;Undo history on movement&lt;/li&gt;
+  &lt;li&gt;Add sample component without sample&lt;/li&gt;
+  &lt;li&gt;Remove sample component without sample&lt;/li&gt;
+  &lt;li&gt;Load a sample pool&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;downloads&quot;&gt;Downloads&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/MyPong-win32.zip&quot;&gt;Win build&lt;/a&gt; directly.
+&lt;a href=&quot;/assets/MyPong-mac.zip&quot;&gt;Mac build&lt;/a&gt; directly.
+&lt;a href=&quot;/assets/MyPong-linux.zip&quot;&gt;Linux build&lt;/a&gt; directly.&lt;/p&gt;</content><author><name></name></author><summary type="html">Intro</summary></entry><entry><title type="html">MyMole</title><link href="/mymole/c++/code/programming/games/2017/11/03/my-mole.html" rel="alternate" type="text/html" title="MyMole" /><published>2017-11-03T00:19:21+01:00</published><updated>2017-11-03T00:19:21+01:00</updated><id>/mymole/c++/code/programming/games/2017/11/03/my-mole</id><content type="html" xml:base="/mymole/c++/code/programming/games/2017/11/03/my-mole.html">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+
+&lt;p&gt;Hello internet friends. I made a small game. you use:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;for the corresponding red square. See:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshot.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
+
+&lt;p&gt;What is the same as MyPong? MainContentComponent
+Okay so what are the differences? Well the DataModel is different.&lt;/p&gt;
+
+&lt;h1 id=&quot;some-thoughts&quot;&gt;Some thoughts&lt;/h1&gt;
+
+&lt;h1 id=&quot;downloads&quot;&gt;Downloads&lt;/h1&gt;
+
+&lt;p&gt;I honestly dont have any builds atm.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/MyMole-win32.zip&quot;&gt;Win build&lt;/a&gt; directly.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/MyMole-mac.zip&quot;&gt;Mac build&lt;/a&gt; directly.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/MyMole-linux.zip&quot;&gt;Linux build&lt;/a&gt; directly.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Intro</summary></entry><entry><title type="html">MyPong</title><link href="/mypong/c++/code/programming/games/2017/11/02/mypong.html" rel="alternate" type="text/html" title="MyPong" /><published>2017-11-02T00:19:21+01:00</published><updated>2017-11-02T00:19:21+01:00</updated><id>/mypong/c++/code/programming/games/2017/11/02/mypong</id><content type="html" xml:base="/mypong/c++/code/programming/games/2017/11/02/mypong.html">&lt;p&gt;Good day internet friends. I’m writing a post about my pong game. Wont finish today though. I hope to write one about each game that I am making as documentation practise.
+I am using the  &lt;a href=&quot;https://www.juce.com/&quot;&gt;JUCE&lt;/a&gt; framework for this. An “Animated Application” project. I assume you’re intelligent enough to find out how to compile and start using JUCE by yourself. You can still read along, it shouldn’t really matter, only if you want to try it out yourself. I’ve used the JUCE live engine thing for this so..&lt;/p&gt;
 
 &lt;p&gt;I assume you know programming and concepts so I’m just gonna go head.&lt;/p&gt;
 
@@ -504,20 +560,4 @@ Setting size and frames per seconds. It doesn’t need to paint anything, that�
 
 &lt;p&gt;&lt;a href=&quot;/assets/MyPong-win32.zip&quot;&gt;Win build&lt;/a&gt; directly.
 &lt;a href=&quot;/assets/MyPong-mac.zip&quot;&gt;Mac build&lt;/a&gt; directly.
-&lt;a href=&quot;/assets/MyPong-linux.zip&quot;&gt;get a Linux build&lt;/a&gt; directly.&lt;/p&gt;</content><author><name></name></author><summary type="html">Good day internet friends. I’m writing a post about my pong game. Wont finish today though. I hope to write one about each game that I am making as documentation practise. I am using the JUCE framework for this. An “Animated Application” project. I assume you’re intelligent enough to find out how to compile and start using JUCE by yourself. You can still read along, it shouldn’t really matter, only if you want to try it out yourself. I’ve used the JUCE live engine thing for this so..</summary></entry><entry><title type="html">First post and testing stuff out (will probably remove later)!</title><link href="/wtf/fff/2017/11/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="First post and testing stuff out (will probably remove later)!" /><published>2017-11-02T00:19:21+01:00</published><updated>2017-11-02T00:19:21+01:00</updated><id>/wtf/fff/2017/11/02/welcome-to-jekyll</id><content type="html" xml:base="/wtf/fff/2017/11/02/welcome-to-jekyll.html">&lt;p&gt;Hello World.&lt;/p&gt;
-
-&lt;p&gt;Testing some tags.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Okay so I can do &lt;a href=&quot;http://www.coolestplaceoneath.com/&quot;&gt;COOL LINKS&lt;/a&gt; with some variable thingy.&lt;/p&gt;
-
-&lt;p&gt;Okay.
-Can I do images?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/screenshot.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;
-… you can &lt;a href=&quot;/assets/AFirstBookinLogic.pdf&quot;&gt;get the PDF&lt;/a&gt; directly.
-… you can &lt;a href=&quot;/assets/TheSevenLiberalArts.pdf&quot;&gt;get the other PDF&lt;/a&gt; directly.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello World.</summary></entry></feed>
+&lt;a href=&quot;/assets/MyPong-linux.zip&quot;&gt;Linux build&lt;/a&gt; directly.&lt;/p&gt;</content><author><name></name></author><summary type="html">Good day internet friends. I’m writing a post about my pong game. Wont finish today though. I hope to write one about each game that I am making as documentation practise. I am using the JUCE framework for this. An “Animated Application” project. I assume you’re intelligent enough to find out how to compile and start using JUCE by yourself. You can still read along, it shouldn’t really matter, only if you want to try it out yourself. I’ve used the JUCE live engine thing for this so..</summary></entry></feed>

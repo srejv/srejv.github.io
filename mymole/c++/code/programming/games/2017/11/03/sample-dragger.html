@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>First post and testing stuff out (will probably remove later)!</title>
-  <meta name="description" content="Hello World.">
+  <title>Sample Dragger</title>
+  <meta name="description" content="Intro">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/wtf/fff/2017/11/02/welcome-to-jekyll.html">
+  <link rel="canonical" href="/mymole/c++/code/programming/games/2017/11/03/sample-dragger.html">
   <link rel="alternate" type="application/rss+xml" title="Kewk" href="/feed.xml">
   
   
@@ -70,33 +70,47 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">First post and testing stuff out (will probably remove later)!</h1>
+    <h1 class="post-title" itemprop="name headline">Sample Dragger</h1>
     <p class="post-meta">
-      <time datetime="2017-11-02T00:19:21+01:00" itemprop="datePublished">
+      <time datetime="2017-11-03T00:19:21+01:00" itemprop="datePublished">
         
-        Nov 2, 2017
+        Nov 3, 2017
       </time>
       </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>Hello World.</p>
+    <h1 id="intro">Intro</h1>
 
-<p>Testing some tags.</p>
+<p>Hello internet friends. I made a small app. You drag around samples and generate
+a new sample depending on the the x position of the sample component. It uses <a href="https://www.juce.com/">JUCE 5</a>.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">Data</span><span class="p">{</span>
-  <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">index</span><span class="p">;</span>
-<span class="p">};</span></code></pre></figure>
+<h1 id="code">Code</h1>
 
-<p>Okay so I can do <a href="http://www.coolestplaceoneath.com/">COOL LINKS</a> with some variable thingy.</p>
+<p>Check out the code on <a href="https://github.com/srejv/SampleDragger">github</a>.</p>
 
-<p>Okay.
-Can I do images?</p>
+<h1 id="some-thoughts">Some thoughts</h1>
 
-<p><img src="/assets/screenshot.jpg" alt="My helpful screenshot" />
-… you can <a href="/assets/AFirstBookinLogic.pdf">get the PDF</a> directly.
-… you can <a href="/assets/TheSevenLiberalArts.pdf">get the other PDF</a> directly.</p>
+<p>Well you can’t really scroll, fade, set volume or preview.</p>
+
+<h2 id="feature-requests">Feature requests:</h2>
+<ul>
+  <li>Viewport to move around with</li>
+  <li>Multiple sample components per audio buffer</li>
+  <li>VST plugin?</li>
+  <li>Play on midiNoteOn, vel &gt; 0</li>
+  <li>Undo history on movement</li>
+  <li>Add sample component without sample</li>
+  <li>Remove sample component without sample</li>
+  <li>Load a sample pool</li>
+</ul>
+
+<h1 id="downloads">Downloads</h1>
+
+<p><a href="/assets/MyPong-win32.zip">Win build</a> directly.
+<a href="/assets/MyPong-mac.zip">Mac build</a> directly.
+<a href="/assets/MyPong-linux.zip">Linux build</a> directly.</p>
+
 
   </div>
 
