@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-11-05T21:04:50+01:00</updated><id>/</id><title type="html">Kewk</title><subtitle>Things. Things.. I was just thinking of making some games and posting stuff here for myself. Not really cool stuff.</subtitle><entry><title type="html">My Quad Dev</title><link href="/dev/2017/11/05/myquaddev.html" rel="alternate" type="text/html" title="My Quad Dev" /><published>2017-11-05T21:00:00+01:00</published><updated>2017-11-05T21:00:00+01:00</updated><id>/dev/2017/11/05/myquaddev</id><content type="html" xml:base="/dev/2017/11/05/myquaddev.html">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-11-05T21:08:02+01:00</updated><id>/</id><title type="html">Kewk</title><subtitle>Things. Things.. I was just thinking of making some games and posting stuff here for myself. Not really cool stuff.</subtitle><entry><title type="html">My Quad Dev</title><link href="/dev/2017/11/05/myquaddev.html" rel="alternate" type="text/html" title="My Quad Dev" /><published>2017-11-05T21:00:00+01:00</published><updated>2017-11-05T21:00:00+01:00</updated><id>/dev/2017/11/05/myquaddev</id><content type="html" xml:base="/dev/2017/11/05/myquaddev.html">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 
 &lt;p&gt;Hello Internet friends. I made a small shadertoy like thing. Its not complete.&lt;/p&gt;
 
@@ -14,6 +14,10 @@
 &lt;h2 id=&quot;source-code&quot;&gt;Source code&lt;/h2&gt;
 
 &lt;p&gt;On &lt;a href=&quot;https://github.com/srejv/MyQuadDev&quot;&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;screenshot&quot;&gt;Screenshot&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gfx-screenshot.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;feature-requests&quot;&gt;Feature requests&lt;/h2&gt;
 
